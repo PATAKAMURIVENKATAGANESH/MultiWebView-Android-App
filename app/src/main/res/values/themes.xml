@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MultiWebViewApp" parent="android:ThemeOverlay.Material.ActionBar" />
+    <style name="Theme.MultiWebViewApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MultiWebViewApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MultiWebViewApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
