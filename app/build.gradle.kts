@@ -21,9 +21,9 @@ android {
     signingConfigs {
         create("release") {
             keyAlias = "multiwebview"
-            keyPassword = "123456"
-            storeFile = file("${System.getProperty("user.home")}/multiwebview-key.keystore")
-            storePassword = "123456"
+            keyPassword = ""
+            storeFile = file("$keystore")
+            storePassword = ""
         }
     }
 
