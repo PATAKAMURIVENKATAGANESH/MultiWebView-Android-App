@@ -18,6 +18,15 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        create("release") {
+            keyAlias = "multiwebview"
+            keyPassword = "123456"
+            storeFile = file("${System.getProperty("user.home")}/multiwebview-key.keystore")
+            storePassword = "123456"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -25,6 +34,12 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
+            isDebuggable = false  // Absolutely no debugging in release
+        }
+        debug {
+            // Even in debug, explicitly disable debugging
+            isDebuggable = false
         }
     }
     compileOptions {
