@@ -125,6 +125,14 @@ This application is ideal for practicing and verifying remote WebView debugging,
       * Make sure Chrome is open on your Mac, and you've navigated to `chrome://inspect/#devices`.
       * Accept any "Allow USB debugging" prompts on your Android device.
 
+## Note
+   * **WebView inspection can be enabled through multiple vectors, Single-layer protection is insufficient**:
+
+   1. App Level - Code settings can be overridden
+   2. Build Level - Debug configurations expose debugging capabilities  
+   3. System Level - Device settings and system WebView behavior
+   4. Network Level - Development and debugging tools
+
 ## Contributing
 
 Feel free to fork this repository, make improvements, or add more complex WebView scenarios for testing.
